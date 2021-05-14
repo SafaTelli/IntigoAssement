@@ -1,4 +1,4 @@
-package com.intigo.intigotest
+package com.intigo.intigoassement
 
 import org.junit.Test
 

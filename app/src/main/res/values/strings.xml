@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">IntigoTest</string>
+    <string name="app_name">IntigoAssement</string>
+    <string name="assessement">Assesment 2021</string>
 </resources>
