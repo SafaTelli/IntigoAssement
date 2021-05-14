@@ -15,6 +15,7 @@ class LocationHelper {
     var LOCATION_REFRESH_DISTANCE =
         0 // 0 meters. The Minimum Distance to be changed to get location update
     var locationListener: LocationListener? = null
+    var TIME_SERVICE = 600000
 
     @SuppressLint("MissingPermission")
     fun startListeningUserLocation(
@@ -28,8 +29,7 @@ class LocationHelper {
                 myListener.onLocationChanged(location)
                 var timePssed =
                     Calendar.getInstance().timeInMillis - sharedPreferences!!.getLong("time", 0)
-                if (timePssed > 180000) {
-                    Log.d("TAG", "onLocationChanged: serviceStoped ${timePssed}")
+                if (timePssed > TIME_SERVICE) {
                     locationManager.removeUpdates(this)
                 }
 
@@ -52,13 +52,6 @@ class LocationHelper {
 
     }
 
-    fun removeUpdate(
-        locationManager: LocationManager
-    ) {
-
-        locationListener?.let { locationManager.removeUpdates(it) }
-
-    }
 }
 
 interface MyLocationListener {

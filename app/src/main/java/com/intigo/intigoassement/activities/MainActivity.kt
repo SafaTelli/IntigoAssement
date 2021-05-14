@@ -1,4 +1,4 @@
-package com.intigo.intigoassement
+package com.intigo.intigoassement.activities
 
 import android.Manifest
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.intigo.intigoassement.R
 import com.intigo.intigoassement.services.LocationService
 
 class MainActivity : AppCompatActivity() {
